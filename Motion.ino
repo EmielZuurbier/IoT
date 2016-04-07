@@ -3,16 +3,6 @@
 #include <EIoTCloudRestApiConfig.h>
 #include <ThingSpeak.h>
 #include <ESP8266WiFi.h>
-#include <ESP8266WiFiAP.h>
-#include <ESP8266WiFiGeneric.h>
-#include <ESP8266WiFiMulti.h>
-#include <ESP8266WiFiScan.h>
-#include <ESP8266WiFiSTA.h>
-#include <ESP8266WiFiType.h>
-#include <WiFiClient.h>
-#include <WiFiClientSecure.h>
-#include <WiFiServer.h>
-#include <WiFiUdp.h>
 
 // Define pins and leds
 int pir = D0;
@@ -84,29 +74,31 @@ void loop() {
       if (pirState == LOW) {
         digitalWrite(led, HIGH);
         Serial.println("Motion detected!");
-        ThingSpeak.writeField(CHANNEL_ID, 1, val, API_KEY);
+        // EIoTCloud
         eiotcloud.sendParameter(INSTANCE_ID_A, 1);
-        // LDR
-        Serial.println(light);
-        delay(1000);
         eiotcloud.sendParameter(INSTANCE_ID_B, light);
-        ThingSpeak.writeField(CHANNEL_ID, 2, light, API_KEY);
+        // ThingSpeak
+        delay(1000);
+        Serial.println(light);
+        ThingSpeak.setField(1,val);
+        ThingSpeak.setField(2,light);
+        ThingSpeak.writeFields(CHANNEL_ID, API_KEY);
         pirState = HIGH;
-        // ThingSpeak only takes updates per 15 seconds
       }
     } else {
       if (pirState == HIGH) {
         digitalWrite(led, LOW);
         Serial.println("Motion ended");
-        ThingSpeak.writeField(CHANNEL_ID, 1, val, API_KEY);
+        // EIoTCloud
         eiotcloud.sendParameter(INSTANCE_ID_A, 0);
-        // LDR
+        eiotcloud.sendParameter(INSTANCE_ID_B, light);
+        // ThingSpeak
         delay(1000);
         Serial.println(light);
-        eiotcloud.sendParameter(INSTANCE_ID_B, light);
-        ThingSpeak.writeField(CHANNEL_ID, 2, light, API_KEY);
+        ThingSpeak.setField(1,val);
+        ThingSpeak.setField(2,light);
+        ThingSpeak.writeFields(CHANNEL_ID, API_KEY);
         pirState = LOW;
-        // ThingSpeak only takes updates per 15 seconds
       }
     }
 }
