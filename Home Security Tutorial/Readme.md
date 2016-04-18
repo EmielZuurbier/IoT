@@ -289,7 +289,7 @@ The Pi has booted up and is ready to receive commands. We'll connect to the Pi f
 
 ```
 ssh@IPaddressOfThePi
-python3 security.py
+sudo python3 security.py
 ```
 Now you're done. You can check the footage anytime you are on the same network as the Pi.
 
