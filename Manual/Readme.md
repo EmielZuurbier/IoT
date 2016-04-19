@@ -38,8 +38,9 @@ Once everything is setup and your Pi is running, we'll proceed with enabling the
 SSL is a protocol which enables us to connect to the Pi from a different computer. This saves you all the hassle with connecting a monitor and keyboard to the Pi. So when we need to make a change to change files or settings with our own computer.
 
 Log in with your username and password. If you'll log in with the default username and password, you'll get root access, which is the highest form of access that we need.  
-*default username = pi*  
-*default password = raspberry*  
+
+default username = **pi**  
+default password = **raspberry**  
 
 Open the Pi configuration tool from the Terminal by typing: 
 ```sudo raspi-config```  
@@ -274,7 +275,7 @@ In Filezilla go to the Sitemanager and create a new site. Fill the fields like s
 - Password: Your Password (default is **raspberry**)
 
 And press connect.  
-Now find the folders `Pictures/Footage` and you'll see a `.h264` file with a date as name. Download this file to your computer.
+Now find the folder `/home/pi/Pictures/Footage` and you'll see a `.h264` file with a date as name. Download this file to your computer.
 
 ### Now let's view the video
 I've used VLC Media Player to play `.h254` video's which workes perfectly. You can get it from [here](http://www.videolan.org/vlc/).
