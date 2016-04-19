@@ -253,7 +253,10 @@ while True:
 Now you've got all the stuff! Save it by pressing `CTRL + X`, then `Y` and last `Enter`. We have left the editor and are ready to give it a go.
 
 Type in the following line into the terminal to launch the script we've just made.  
-`sudo python3 security.py`  
+
+```
+sudo python3 security.py
+```  
 
 The terminal will give you a message that it has started and that you can exit with `CTRL + C`. Wave your hand in front of the PIR sensor. The terminal will now display some info of the pin output. If the GPIO pin is `HIGH` it has detected movement and will start recording, and `LOW` means it has not detected anything and will stop recording.
 If it doesn't do anything or give an error, check the code for errors by reopening the editor with `nano security.py`.
