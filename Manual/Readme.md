@@ -305,3 +305,10 @@ Now you're done. You can check the footage anytime you are on the same network a
 ## Adding Wifi (optional)
 A tutorial for setting up WiFi on your Pi is down here:
 [https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)
+
+## References
+[NOOBS Download](https://www.raspberrypi.org/downloads/noobs/)  
+[NOOBS Setup](https://www.raspberrypi.org/help/noobs-setup/)  
+[PIR Installation](http://diyhacking.com/raspberry-pi-gpio-control/)  
+[Camera Installation](https://www.raspberrypi.org/documentation/usage/camera/README.md)  
+[Code from raspberrypi.org](https://www.raspberrypi.org/learning/parent-detector/worksheet/)
