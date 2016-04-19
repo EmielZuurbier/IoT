@@ -108,8 +108,12 @@ We've created a folder called `Footage`. This way we know where to look when we'
 
 ### Adding the Python
 Create a new file  
-`nano security.py`  
-`nano` opens a text editor in which we can create code. The `.py` says it's a Python script.  
+
+```
+nano security.py
+```  
+
+`nano` opens a text editor in which we can create code. We've named the file `security.py`. The `.py` says it's a Python script.  
 
 Now nano has opened we can start typing. We want to import some stuff so we can use that in our script. These things are:
 
