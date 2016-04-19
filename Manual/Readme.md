@@ -291,7 +291,7 @@ That means some settings aren't right in VLC. Go to `preferences` and click on `
 ## Final steps
 We've come a long way to create your own Home Security System. We've prepared your Pi, assembled all of the hardware and written the code to run the camera when motion is detected.
 
-Now that there is left is installing your Pi in an inconspicuous place from where you'll want to record. Set it up and connect the power and internet connection. **(If you use WiFi, scroll to the bottom for the tutorial on how to set it up).**
+Now all that there is left is installing your Pi in an inconspicuous place from where you'll want to record. Set it up and connect the power and internet connection. **(If you use WiFi, scroll to the bottom for the tutorial on how to set it up).**
 
 The Pi has booted up and is ready to receive commands. We'll connect to the Pi from our computer using SSH which we enabled earlier with the following command.
 
